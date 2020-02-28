@@ -3,6 +3,7 @@
 @font-face {
   font-family: 'TTNorms';
   src: url("/dodo_passboard/TTNorms-Bold.woff");
+  font-display: block;
 
 }
 
