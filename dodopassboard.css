@@ -1,0 +1,17 @@
+@use "@material/floating-label/mdc-floating-label";
+
+@font-face {
+  font-family: 'TTNorms';
+  src: url("TTNorms-Bold.woff");
+
+}
+
+.mdc-button,
+.mdc-text-field,
+.mdc-floating-label {
+  --mdc-theme-primary: #5adcc9;
+}
+
+body {
+  background: url(PNQ5cOe.png) repeat;
+}
