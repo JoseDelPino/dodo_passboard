@@ -13,6 +13,13 @@
   --mdc-theme-primary: #5adcc9;
 }
 
+#form{
+	width: 760px;
+	height: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body {
   background: url(PNQ5cOe.png) repeat;
 }
