@@ -14,6 +14,10 @@ span {
   color: cornsilk;
 }
 
+.row {
+  max-height: 600px;
+}
+
 #form {
   text-align: center;
   width: 100%;
@@ -28,7 +32,8 @@ span {
 
 #name,
 #surname,
-#departure,
+#departure_date,
+#departure_time,
 #canvas {
   width: 80%;
   margin: 1em;

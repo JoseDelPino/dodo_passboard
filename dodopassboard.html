@@ -23,16 +23,19 @@
       <div class="row"><img src="welcome.png" id="welcome_image" /></div>
       
       <div class="row">
-        <div class="col-sm">
+        <div class="col-md-6 col-lg-4">
           <input type="text" id="name" placeholder="Name" required>
         </div>
-        <div class="col-sm">
+        <div class="col-md-6 col-lg-4">
           <input type="text" id="surname" placeholder="Surname" required>
         </div>
-        <div class="col-sm">
-          <input type="datetime-local" id="departure" placeholder="Departure" required>
+        <div class="col-md-6 col-lg-4">
+          <input type="date" id="departure_date" placeholder="Departure" required>
         </div>
-        <div class="col-sm">
+        <div class="col-md-6 col-lg-4">
+          <input type="time" id="departure_time" placeholder="Departure" required>
+        </div>
+        <div class="col-md-6 col-lg-4">
           <button type="submit" id="generate_passboard" onclick="render();return false">
             <span>GENERATE PASSBOARD</span>
           </button>
@@ -81,16 +84,14 @@
       const complete_name = name + ' ' + surname;
 
       //We divide and enrich the departure information
-      const departure = document.getElementById("departure").value;
-      const departure_date_type = new Date(departure.substring(0, 4), departure.substring(5, 7), departure.substring(8,
-        10));
+      const departure_date = document.getElementById("departure_date").value;
+      const departure_time = document.getElementById("departure_time").value;
+      const departure_date_type = new Date(
+        departure_date.substring(0, 4), departure_date.substring(5, 7), departure_date.substring(8,10));
       const short_month = departure_date_type.toLocaleString('en-us', {
         month: 'short'
       });
-      const departure_day_ordinal = getOrdinalSuper(departure.substring(8, 10));
-      const departure_date = short_month + '. ' + departure.substring(8, 10) + departure_day_ordinal + ', ' + departure
-        .substring(0, 4);
-      const departure_time = departure.substring(11, 16);
+      const departure_day_ordinal = getOrdinalSuper(departure_date.substring(8, 10));
 
       console.log(window.location.pathname);
 
@@ -100,8 +101,11 @@
       } else if (!surname) {
         console.log("Empty surname");
         return false;
-      } else if (!departure) {
-        console.log("Empty destination");
+      } else if (!departure_date) {
+        console.log("Empty departure date");
+        return false;
+      } else if (!departure_time) {
+        console.log("Empty departure time");
         return false;
       }
 
