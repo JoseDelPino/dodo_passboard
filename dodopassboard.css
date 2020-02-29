@@ -13,11 +13,12 @@
   --mdc-theme-primary: #5adcc9;
 }
 
+#generate_passboard  {
+  background-color: blueviolet;
+}
+
 #form{
-	width: 760px;
-	height: 1px;
-	margin-left: auto;
-	margin-right: auto;
+  text-align: center;
 }
 
 body {
