@@ -30,10 +30,10 @@
           <input type="text" id="surname" placeholder="Surname" required>
         </div>
         <div class="col-md-6 col-lg-4">
-          <input type="date" id="departure_date" placeholder="Departure" required>
+          <input type="date" id="departure_date" placeholder="YYYY-MM-DD" required>
         </div>
         <div class="col-md-6 col-lg-4">
-          <input type="time" id="departure_time" placeholder="Departure" required>
+          <input type="time" id="departure_time" placeholder="HH:MM" required>
         </div>
         <div class="col-md-6 col-lg-4">
           <button type="submit" id="generate_passboard" onclick="render();return false">
@@ -43,7 +43,7 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <canvas id="canvas" width="1000" height="500">
+          <canvas id="canvas" width="1000" height="500" style="display: none;">
             Your browser does not support the HTML5 canvas tag.</canvas>
         </div>
       </div>
