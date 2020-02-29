@@ -16,7 +16,7 @@
 
 #generate_passboard  {
   background-color: blueviolet;
-  width: 100%;
+  width: 80%;
 }
 #name, #surname, #departure  {
   width: 100%;
@@ -29,6 +29,7 @@
 
 #welcome_image {
   width: 100%;
+  max-width: 800px;
 }
 
 .mdc-layout-grid__cell{

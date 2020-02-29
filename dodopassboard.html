@@ -19,32 +19,28 @@
     <br>
     <br>
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell">
+        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
           <div class="mdc-text-field">
             <input type="text" id="name" placeholder="Placeholder text" class="mdc-text-field__input" required>
             <label class="mdc-floating-label" for="name">Name</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </div>
-        <div class="mdc-layout-grid__cell">
+        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
           <div class="mdc-text-field">
             <input type="text" id="surname" class="mdc-text-field__input" required>
             <label class="mdc-floating-label" for="surname">Surame</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </div>
-        <div class="mdc-layout-grid__cell">
+        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
           <div class="mdc-text-field">
             <input type="datetime-local" id="departure" class="mdc-text-field__input" required>
             <label class="mdc-floating-label" for="surname">Departure</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </div>
-      </div>
-      <br>
-      <br>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell--span-12">
+        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
           <button type="submit" class="mdc-button mdc-button--raised foo-button" id="generate_passboard"
             onclick="render();return false">
             <div class="mdc-button__ripple"></div>
@@ -53,6 +49,8 @@
           </button>
         </div>
       </div>
+      <br>
+      <br>
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell--span-12">
           <canvas id="canvas" width="1000" height="500">
