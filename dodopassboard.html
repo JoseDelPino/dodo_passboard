@@ -8,39 +8,41 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="dodopassboard.css">
   <link rel="preload" href="/dodo_passboard/TTNorms-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="icon" href="/dodo_passboard/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
 
   <form id="form">
-    <div class="mdc-layout-grid">
+    <div class="container">
       <img src="welcome.png" id="welcome_image" />
     <br>
     <br>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
+      <div class="row">
+        <div class="col-sm">
           <div class="mdc-text-field">
             <input type="text" id="name" placeholder="Placeholder text" class="mdc-text-field__input" required>
             <label class="mdc-floating-label" for="name">Name</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </div>
-        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
+        <div class="col-sm">
           <div class="mdc-text-field">
             <input type="text" id="surname" class="mdc-text-field__input" required>
             <label class="mdc-floating-label" for="surname">Surame</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </div>
-        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
+        <div class="col-sm">
           <div class="mdc-text-field">
             <input type="datetime-local" id="departure" class="mdc-text-field__input" required>
             <label class="mdc-floating-label" for="surname">Departure</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </div>
-        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-12-mobile">
+        <div class="col-sm">
           <button type="submit" class="mdc-button mdc-button--raised foo-button" id="generate_passboard"
             onclick="render();return false">
             <div class="mdc-button__ripple"></div>

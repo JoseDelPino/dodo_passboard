@@ -16,6 +16,7 @@
 
 #generate_passboard  {
   background-color: blueviolet;
+  height: 100%;
   width: 80%;
 }
 #name, #surname, #departure  {
