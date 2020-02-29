@@ -112,7 +112,9 @@
       const seat_gate = seat_number + seat_letter + '/' + gate_number + gate_letter;
 
       //We draw the background image
+      background.hidden = false;
       ctx.drawImage(background, 8, 0);
+      background.hidden = true;
 
       //We fill the left part of the ticket
       ctx.font = "55px TTNorms";
@@ -131,7 +133,7 @@
       ctx.fillText(departure_time, 1420, 820);
 
       var link = document.createElement('a');
-      link.download = 'filename.png';
+      link.download = 'passboard.png';
       link.href = c.toDataURL()
       link.click();
 
