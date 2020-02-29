@@ -47,18 +47,17 @@
     <br>
     <br>
 
-    <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background" style="display: none;" />
+    <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background"  />
 
   </form>
 
   <script>
     //We initialize all the input fields animations
-    const edtTexts = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
-      return new mdc.textField.MDCTextField(el);
-    });
+    /*  return new mdc.textField.MDCTextField(el);
+    });*/
 
     //We initialize the button animation
-    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    //mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button')); style="display: none;"
 
 
 
@@ -130,6 +129,11 @@
       ctx.fillText(departure_date, 1420, 520);
       ctx.fillText(seat_gate, 1420, 670);
       ctx.fillText(departure_time, 1420, 820);
+
+      var link = document.createElement('a');
+      link.download = 'filename.png';
+      link.href = c.toDataURL()
+      link.click();
 
       return false;
 

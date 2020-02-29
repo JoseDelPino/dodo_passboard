@@ -28,7 +28,8 @@ span {
 
 #name,
 #surname,
-#departure {
+#departure,
+#canvas {
   width: 80%;
   margin: 1em;
   border-radius: 4px;
