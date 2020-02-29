@@ -11,19 +11,27 @@
 .mdc-text-field,
 .mdc-floating-label {
   --mdc-theme-primary: #5adcc9;
-  
+
 }
 
-#generate_passboard  {
+#generate_passboard {
   background-color: blueviolet;
-  height: 100%;
   width: 80%;
-}
-#name, #surname, #departure  {
-  width: 100%;
+  margin: 1em;
 }
 
-#form{
+span {
+  color: cornsilk;
+}
+
+#name,
+#surname,
+#departure {
+  width: 100%;
+  margin: 1em;
+}
+
+#form {
   text-align: center;
   width: 100%;
 }
@@ -33,7 +41,7 @@
   max-width: 800px;
 }
 
-.mdc-layout-grid__cell{
+.mdc-layout-grid__cell {
   align-self: center;
 }
 

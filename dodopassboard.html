@@ -8,98 +8,46 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="dodopassboard.css">
   <link rel="preload" href="/dodo_passboard/TTNorms-Bold.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="icon" href="/dodo_passboard/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
-  <form id="form">
-    <div class="container">
-      <img src="welcome.png" id="welcome_image" />
-    <br>
-    <br>
+  <form id=" form">
+  <div class="container">
+    <img src="welcome.png" id="welcome_image" />
+    <div class="row">
+      <div class="col-sm">
+        <input type="text" id="name" placeholder="Placeholder text" required>
+      </div>
+      <div class="col-sm">
+        <input type="text" id="surname" required>
+      </div>
+      <div class="col-sm">
+        <input type="datetime-local" id="departure" required>
+      </div>
+      <div class="col-sm">
+        <button type="submit" id="generate_passboard" onclick="render();return false">
+          <span>GENERATE PASSBOARD</span>
+        </button>
+      </div>
+    </div>
+    <div class="row">
       <div class="row">
-        <div class="col-sm">
-          <div class="mdc-text-field">
-            <input type="text" id="name" placeholder="Placeholder text" class="mdc-text-field__input" required>
-            <label class="mdc-floating-label" for="name">Name</label>
-            <div class="mdc-line-ripple"></div>
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="mdc-text-field">
-            <input type="text" id="surname" class="mdc-text-field__input" required>
-            <label class="mdc-floating-label" for="surname">Surame</label>
-            <div class="mdc-line-ripple"></div>
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="mdc-text-field">
-            <input type="datetime-local" id="departure" class="mdc-text-field__input" required>
-            <label class="mdc-floating-label" for="surname">Departure</label>
-            <div class="mdc-line-ripple"></div>
-          </div>
-        </div>
-        <div class="col-sm">
-          <button type="submit" class="mdc-button mdc-button--raised foo-button" id="generate_passboard"
-            onclick="render();return false">
-            <div class="mdc-button__ripple"></div>
-            <span class="mdc-button__label">GENERATE PASSBOARD</span>
-            <i class="material-icons mdc-button__icon" aria-hidden="true">local_offer</i>
-          </button>
-        </div>
-      </div>
-      <br>
-      <br>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell--span-12">
-          <canvas id="canvas" width="1000" height="500">
-            Your browser does not support the HTML5 canvas tag.</canvas>
-      
-        </div>
+        <canvas id="canvas" width="1000" height="500">
+          Your browser does not support the HTML5 canvas tag.</canvas>
+
       </div>
     </div>
+  </div>
 
-    <!-- <div class="mdc-text-field">
-      <input type="text" id="name" placeholder="Placeholder text" class="mdc-text-field__input" required>
-      <label class="mdc-floating-label" for="name">Name</label>
-      <div class="mdc-line-ripple"></div>
-    </div>
+  <br>
+  <br>
 
-
-    <div class="mdc-text-field">
-      <input type="text" id="surname" class="mdc-text-field__input" required>
-      <label class="mdc-floating-label" for="surname">Surame</label>
-      <div class="mdc-line-ripple"></div>
-    </div>
-    <br>
-    <br>
-    <div class="mdc-text-field">
-      <input type="datetime-local" id="departure" class="mdc-text-field__input" required>
-      <label class="mdc-floating-label" for="surname">Departure</label>
-      <div class="mdc-line-ripple"></div>
-    </div>
-
-    <br>
-    <br>
-
-    <button type="submit" class="mdc-button mdc-button--raised foo-button" id="generate_passboard"
-      onclick="render();return false">
-      <div class="mdc-button__ripple"></div>
-      <span class="mdc-button__label">GENERATE PASSBOARD</span>
-      <i class="material-icons mdc-button__icon" aria-hidden="true">local_offer</i>
-    </button> -->
-
-    <br>
-    <br>
-<!--     <canvas id="canvas" width="1000" height="500">
-      Your browser does not support the HTML5 canvas tag.</canvas> -->
-
-    <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background" style="display: none;" />
-    <br>
-    <br>
+  <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background" style="display: none;" />
 
   </form>
 
@@ -194,6 +142,6 @@
     }
   </script>
 
-</body>
+  </body>
 
 </html>
