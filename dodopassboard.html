@@ -17,37 +17,35 @@
 <body>
 
   <form id=" form">
-  <div class="container">
-    <img src="welcome.png" id="welcome_image" />
-    <div class="row">
-      <div class="col-sm">
-        <input type="text" id="name" placeholder="Placeholder text" required>
-      </div>
-      <div class="col-sm">
-        <input type="text" id="surname" required>
-      </div>
-      <div class="col-sm">
-        <input type="datetime-local" id="departure" required>
-      </div>
-      <div class="col-sm">
-        <button type="submit" id="generate_passboard" onclick="render();return false">
-          <span>GENERATE PASSBOARD</span>
-        </button>
-      </div>
-    </div>
-    <div class="row">
+    <div class="container">
+      <img src="welcome.png" id="welcome_image" />
       <div class="row">
-        <canvas id="canvas" width="1000" height="500">
-          Your browser does not support the HTML5 canvas tag.</canvas>
-
+        <div class="col-sm">
+          <input type="text" id="name" placeholder="Name" required>
+        </div>
+        <div class="col-sm">
+          <input type="text" id="surname" placeholder="Surname" required>
+        </div>
+        <div class="col-sm">
+          <input type="datetime-local" id="departure" placeholder="Departure" required>
+        </div>
+        <div class="col-sm">
+          <button type="submit" id="generate_passboard" onclick="render();return false">
+            <span>GENERATE PASSBOARD</span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <canvas id="canvas" width="1000" height="500">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>
       </div>
     </div>
-  </div>
+    <br>
+    <br>
 
-  <br>
-  <br>
-
-  <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background" style="display: none;" />
+    <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background" style="display: none;" />
 
   </form>
 
@@ -60,19 +58,20 @@
     //We initialize the button animation
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
 
-    //We create and prepare the canvas
-    var c = document.getElementById("canvas");
-    var ctx = c.getContext("2d");
-    c.width = 2000;
-    c.height = 880;
-    c.style.width = "1000px";
-    c.style.height = "440px";
 
-    //We obtain the background image
-    const background = document.getElementById('background');
 
     function render() {
 
+      //We create and prepare the canvas
+      var c = document.getElementById("canvas");
+      var ctx = c.getContext("2d");
+      c.width = 2000;
+      c.height = 880;
+      c.style.width = "1000px";
+      c.style.height = "440px";
+
+      //We obtain the background image
+      const background = document.getElementById('background');
 
       //We combine the name and the surname into one
       const name = document.getElementById("name").value;
@@ -142,6 +141,6 @@
     }
   </script>
 
-  </body>
+</body>
 
 </html>
