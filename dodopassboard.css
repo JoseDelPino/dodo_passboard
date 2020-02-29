@@ -24,6 +24,7 @@
 
 #form{
   text-align: center;
+  width: 100%;
 }
 
 .mdc-layout-grid__cell{
@@ -32,4 +33,5 @@
 
 body {
   background: url(PNQ5cOe.png) repeat;
+  width: 100%;
 }
