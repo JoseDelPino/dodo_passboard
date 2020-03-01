@@ -6,13 +6,28 @@
 }
 
 body {
-  background: url(PNQ5cOe.png) repeat;
-  width: 100%;
+
+  background-image: radial-gradient(#a6ffad 5%, transparent 0%),
+      radial-gradient(#ffe695 5%, transparent 0%);
+  background-color: #5bdbc6;
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+/* 	background:
+		linear-gradient(90deg, #5bbef7 (22px - 2px), transparent 1%) center,
+		linear-gradient(#5bbef7 (22px - 2px), transparent 1%) center,
+		rgb(56, 232, 129);
+	background-size: 22px 22px; */
 }
 
-span {
+/* body {
+   background: url(PNQ5cOe.png) repeat; 
+  background-color: #5bbef7;
+  width: 100%;
+} */
+
+/* span {
   color: cornsilk;
-}
+} */
 
 .row {
   max-height: 600px;
@@ -42,10 +57,22 @@ span {
 }
 
 #generate_passboard {
-  background-color: #5cbeff;
+  background-color: #fef7e3;
+  /* background-color: #5bdbc6; */
   width: 80%;
   margin: 1em;
   border-radius: 4px;
   font: 'TTNorms';
+  
+  /* border-width: 2px; */
+  /* border-color: #42a090; */
   border-color: transparent;
+}
+
+.page-footer {
+  background-color: #fef7e3;
+}
+
+input{
+  text-align:center;
 }
