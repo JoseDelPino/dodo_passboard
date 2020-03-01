@@ -29,6 +29,15 @@ body {
   color: cornsilk;
 } */
 
+a {
+  color: #5bdbc6;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #696052;
+  opacity: 0.6; /* Firefox */
+}
+
 .row {
   max-height: 600px;
 }
@@ -54,6 +63,8 @@ body {
   margin: 1em;
   border-radius: 4px;
   border-color: transparent;
+  background-color: #fef7e3;
+  color: #696052;
 }
 
 #generate_passboard {
@@ -63,6 +74,7 @@ body {
   margin: 1em;
   border-radius: 4px;
   font: 'TTNorms';
+  color: #696052;
   
   /* border-width: 2px; */
   /* border-color: #42a090; */
@@ -71,6 +83,7 @@ body {
 
 .page-footer {
   background-color: #fef7e3;
+  color: #696052;
 }
 
 input{
