@@ -4,15 +4,14 @@
 <head>
   <title>Passboard Maker</title>
   <link rel="icon" href="/dodo_passboard/favicon.png">
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="dodopassboard.css">
   <link rel="preload" href="/dodo_passboard/TTNorms-Bold.woff" as="font" type="font/woff" crossorigin>
   <link rel="prefetch" href="/dodo_passboard/TTNorms-Bold.woff" as="font" type="font/woff" crossorigin>
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -21,7 +20,7 @@
   <form id="form">
     <div class="container">
       <div class="row"><img src="welcome.png" id="welcome_image" /></div>
-      
+
       <div class="row">
         <div class="col-md-6 col-lg-3">
           <input type="text" id="name" placeholder="Name" required>
@@ -35,17 +34,16 @@
         <div class="col-md-6 col-lg-3">
           <input type="time" id="departure_time" placeholder="HH:MM" required>
         </div>
-        
-        
       </div>
+      <br>
+      <br>
       <div class="row">
-        <div class="col-md-2 col-lg-4"></div>
-        <div class="col-md-8 col-lg-4">
-          <button type="submit" id="generate_passboard" onclick="render();return false">
-            <span>GENERATE PASSBOARD</span>
-          </button>
+        <div class="col-md-3 col-lg-4"></div>
+        <div class="col-md-6 col-lg-4">
+          <img id="generate" src="Generate-01.svg" width="80%" id="generate" onmouseover="hover(this);"
+            onmouseout="unhover(this);" onclick="render();return false" />
         </div>
-        <div class="col-md-2 col-lg-4"></div>
+        <div class="col-md-3 col-lg-4"></div>
       </div>
       <div class="row">
         <div class="col-sm">
@@ -56,18 +54,31 @@
     </div>
     <br>
     <br>
-
     <img src="ACNH-BoardingPass-BLANK.svg" width="6000" height="3000" id="background" style="display: none;" />
-
   </form>
 
   <script>
-    //We initialize all the input fields animations
-    /*  return new mdc.textField.MDCTextField(el);
-    });*/
+    //We set the a different background depending on the time of day
+    var d = new Date();
+    var n = d.getHours();
+    if (n > 19 || n < 6)
+      // If time is after 7PM or before 6AM, apply night theme to ‘body’
+      document.body.className = "night";
+    else if (n > 16 && n < 19)
+      // If time is between 4PM – 7PM sunset theme to ‘body’
+      document.body.className = "sunset";
+    else
+      // Else use ‘day’ theme
+      document.body.className = "day";
 
-    //We initialize the button animation
-    //mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button')); "
+    //Functions that change the svg of the button on hover
+    function hover(element) {
+      element.setAttribute('src', 'Generate-02.svg');
+    }
+
+    function unhover(element) {
+      element.setAttribute('src', 'Generate-01.svg');
+    }
 
 
 
@@ -93,7 +104,7 @@
       const departure_date = document.getElementById("departure_date").value;
       const departure_time = document.getElementById("departure_time").value;
       const departure_date_type = new Date(
-        departure_date.substring(0, 4), departure_date.substring(5, 7), departure_date.substring(8,10));
+        departure_date.substring(0, 4), departure_date.substring(5, 7), departure_date.substring(8, 10));
       const short_month = departure_date_type.toLocaleString('en-us', {
         month: 'short'
       });
@@ -162,11 +173,9 @@
 
 </body>
 
-<footer class="page-footer font-small">
-  <div class="footer-copyright text-center py-3">
-    Designed by <a href="https://mdbootstrap.com/"> XXX</a>
-    and coded by <a href="https://mdbootstrap.com/"> XXX</a>
-  </div>
-</footer>
+<div class="footer">
+  <img id="beach" src="Beach.svg" />
+  <img id="credits" src="Credits.svg" />
+</div>
 
 </html>
