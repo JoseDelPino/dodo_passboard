@@ -5,28 +5,29 @@
 
 }
 
-.night {
-  background-image: radial-gradient(#cafff6 5%, transparent 0%),
-    radial-gradient(#fff6d6 5%, transparent 0%);
-  background-color: #2c3450;
-  background-position: 0 0, 25px 25px;
-  background-size: 50px 50px;
+body {
+  background: url(pattern.png) repeat;
+  width: 100%;
 }
 
-.sunset {
-  background-image: radial-gradient(rgb(253, 77, 121) 5%, transparent 0%),
-    radial-gradient(rgb(255, 233, 107) 5%, transparent 0%);
+.dark {
+  background-color: #2c3450;
+}
+
+.sunrise {
   background-color: rgb(255, 180, 94);
-  background-position: 0 0, 25px 25px;
-  background-size: 50px 50px;
 }
 
 .day {
-  background-image: radial-gradient(rgb(55, 160, 111) 5%, transparent 0%),
-    radial-gradient(rgb(146, 91, 39) 5%, transparent 0%);
-  background-color: rgb(125, 233, 125);
-  background-position: 0 0, 25px 25px;
-  background-size: 50px 50px;
+  background-color: rgb(100, 235, 120);
+}
+
+.sunset {
+  background-color: rgb(255, 94, 116);
+}
+
+.night {
+  background-color: rgb(94, 191, 255);
 }
 
 a {

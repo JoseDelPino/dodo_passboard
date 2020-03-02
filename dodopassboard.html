@@ -61,17 +61,18 @@
     //We set the a different background depending on the time of day
     var d = new Date();
     var n = d.getHours();
-    if (n > 19 || n < 6)
-      // If time is after 7PM or before 6AM, apply night theme to ‘body’
-      document.body.className = "night";
-    else if (n > 16 && n < 19)
-      // If time is between 4PM – 7PM sunset theme to ‘body’
-      document.body.className = "sunset";
-    else
-      // Else use ‘day’ theme
+    if (n >= 22 || n < 6)
+      document.body.className = "dark";
+    else if (n >= 6 && n < 10)
+      document.body.className = "sunrise";
+    else if (n >= 10 && n < 14)
       document.body.className = "day";
+    else if (n >= 14 && n < 18)
+      document.body.className = "sunset";
+    else if (n >= 18 && n < 22)
+      document.body.className = "night";
 
-    //Functions that change the svg of the button on hover
+
     function hover(element) {
       element.setAttribute('src', 'Generate-02.svg');
     }
