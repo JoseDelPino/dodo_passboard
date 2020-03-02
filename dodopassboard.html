@@ -103,8 +103,9 @@
       //We divide and enrich the departure information
       var departure_date = document.getElementById("departure_date").value;
       const departure_time = document.getElementById("departure_time").value;
+      var month_number = departure_date.substring(5, 7) - 1;
       const departure_date_type = new Date(
-        departure_date.substring(0, 4), departure_date.substring(5, 7), departure_date.substring(8, 10));
+        departure_date.substring(0, 4), month_number, departure_date.substring(8, 10));
       const short_month = departure_date_type.toLocaleString('en-us', {
         month: 'short'
       });
