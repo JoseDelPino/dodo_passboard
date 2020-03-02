@@ -72,14 +72,6 @@ a {
   color: #696052;
 }
 
-#generate {
-  background: url('GenerateState1.svg');
-}
-
-#generate:hover {
-  background: url('GenerateState2.svg');
-}
-
 input {
   text-align: center;
 }
