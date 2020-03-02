@@ -101,7 +101,7 @@
       const complete_name = name + ' ' + surname;
 
       //We divide and enrich the departure information
-      const departure_date = document.getElementById("departure_date").value;
+      var departure_date = document.getElementById("departure_date").value;
       const departure_time = document.getElementById("departure_time").value;
       const departure_date_type = new Date(
         departure_date.substring(0, 4), departure_date.substring(5, 7), departure_date.substring(8, 10));
@@ -109,7 +109,7 @@
         month: 'short'
       });
       const departure_day_ordinal = getOrdinalSuper(departure_date.substring(8, 10));
-
+      var departure_date = short_month + ". " + departure_date.substring(8,10) + departure_day_ordinal + ", " + departure_date.substring(0,4);
       console.log(window.location.pathname);
 
       if (!name) {
