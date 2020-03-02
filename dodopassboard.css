@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(pattern.png) repeat;
+  background: url("/dodo_passboard/pattern.png") repeat;
   width: 100%;
 }
 
