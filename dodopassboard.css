@@ -22,9 +22,9 @@
 }
 
 .day {
-  background-image: radial-gradient(rgb(255, 228, 107) 5%, transparent 0%),
-    radial-gradient(rgb(213, 107, 255) 5%, transparent 0%);
-  background-color: rgb(133, 200, 255);
+  background-image: radial-gradient(rgb(55, 160, 111) 5%, transparent 0%),
+    radial-gradient(rgb(146, 91, 39) 5%, transparent 0%);
+  background-color: rgb(125, 233, 125);
   background-position: 0 0, 25px 25px;
   background-size: 50px 50px;
 }
